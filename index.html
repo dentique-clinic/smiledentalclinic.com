@@ -1,1 +1,1303 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5fbfa">
+  <title>Smile Dental Clinic | Your Smile, Our Passion</title>
+  <meta name="description" content="Discover personalized dental care at Smile Dental Clinic. Explore our services and take the first step toward a confident smile.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --teal: #087f79;
+      --teal-dark: #075b58;
+      --mint: #e6f5f1;
+      --ink: #183331;
+      --muted: #687b79;
+      --white: #ffffff;
+      --cream: #f7faf8;
+      --border: #e1ece8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 30px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 43px);
+      font-weight: 700;
+    }
+
+    .section-intro {
+      max-width: 570px;
+      color: var(--muted);
+      margin-top: 16px;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 25px;
+      background: var(--teal);
+      color: var(--white);
+      border: 1px solid var(--teal);
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: background .25s, transform .25s, box-shadow .25s;
+    }
+
+    .btn:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 9px 24px #087f7926;
+    }
+
+    .btn-light {
+      color: var(--teal-dark);
+      background: var(--white);
+      border-color: var(--border);
+    }
+
+    .btn-light:hover {
+      color: var(--white);
+      border-color: var(--teal);
+    }
+
+    /* Header */
+
+    .topline {
+      background: var(--teal-dark);
+      color: #ffffff;
+      padding: 9px 0;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: .5px;
+    }
+
+    .topline span {
+      color: #b7f0df;
+      font-weight: 700;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #edf2f0;
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--mint);
+      color: var(--teal);
+      font-size: 27px;
+      font-weight: 700;
+    }
+
+    .logo-name {
+      display: block;
+      font-family: "Manrope", sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -.7px;
+      line-height: 1.2;
+    }
+
+    .logo-sub {
+      color: var(--muted);
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #526663;
+    }
+
+    .nav-links a:not(.btn):hover {
+      color: var(--teal);
+    }
+
+    .nav .btn {
+      min-height: 44px;
+      padding: 0 17px;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 75px 0 78px;
+      background:
+        radial-gradient(ellipse at 80% 30%, #d9f2eb 0%, transparent 40%),
+        linear-gradient(120deg, #f7fbf9, #edf7f3);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr .92fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .hero h1 {
+      margin: 23px 0 20px;
+      max-width: 600px;
+      font-size: clamp(43px, 5.5vw, 68px);
+      font-weight: 700;
+      letter-spacing: -3px;
+    }
+
+    .hero h1 span {
+      color: var(--teal);
+    }
+
+    .hero-copy {
+      max-width: 480px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .note-icon {
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      background: #d7eee7;
+      color: var(--teal);
+      display: grid;
+      place-items: center;
+      font-size: 19px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-width: 0;
+      padding: 0 0 25px 25px;
+    }
+
+    .hero-image {
+      height: 490px;
+      border-radius: 150px 150px 12px 12px;
+      object-position: center;
+      box-shadow: 0 22px 65px #1a55451c;
+    }
+
+    .floating-card {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 17px 21px;
+      background: white;
+      border: 1px solid #edf3f0;
+      border-radius: 10px;
+      box-shadow: 0 12px 35px #1c4e4015;
+    }
+
+    .floating-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: var(--mint);
+      color: var(--teal);
+      font-size: 23px;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .floating-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* Trust strip */
+
+    .trust-strip {
+      padding: 25px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .trust-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .trust-item span {
+      color: var(--teal);
+      font-size: 23px;
+    }
+
+    /* About */
+
+    .about {
+      padding: 100px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+    }
+
+    .about-photo {
+      height: 420px;
+      border-radius: 12px;
+      object-position: center;
+    }
+
+    .photo-label {
+      position: absolute;
+      right: -18px;
+      bottom: 22px;
+      background: var(--teal);
+      color: white;
+      padding: 18px 22px;
+      border-radius: 8px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 10px 30px #087f792b;
+    }
+
+    .about-content h2 {
+      margin: 20px 0;
+    }
+
+    .about-content > p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin: 25px 0 29px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .check {
+      display: grid;
+      place-items: center;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background: var(--mint);
+      color: var(--teal);
+      flex-shrink: 0;
+    }
+
+    /* Services */
+
+    .services {
+      padding: 95px 0 100px;
+      background: var(--cream);
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 48px;
+    }
+
+    .section-heading .eyebrow {
+      justify-content: center;
+    }
+
+    .section-heading h2 {
+      margin-top: 18px;
+    }
+
+    .section-heading p {
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 30px 27px;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 38px #204b3c0d;
+      border-color: #b9dcd1;
+    }
+
+    .service-icon {
+      width: 53px;
+      height: 53px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--mint);
+      color: var(--teal);
+      font-size: 26px;
+      margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+      font-size: 19px;
+      letter-spacing: -.5px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      min-height: 70px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      gap: 8px;
+      margin-top: 20px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .service-link:hover {
+      gap: 13px;
+    }
+
+    /* Benefits */
+
+    .benefits {
+      padding: 95px 0;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .benefit-content h2 {
+      margin: 20px 0;
+    }
+
+    .benefit-content > p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .benefit-list {
+      display: grid;
+      gap: 23px;
+      margin-top: 32px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .benefit-item .service-icon {
+      width: 45px;
+      height: 45px;
+      font-size: 21px;
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    .benefit-item h3 {
+      font-size: 15px;
+      letter-spacing: -.3px;
+      margin-bottom: 5px;
+    }
+
+    .benefit-item p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .benefit-image {
+      height: 530px;
+      border-radius: 12px;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 0 0 95px;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 53px 58px;
+      background: var(--teal-dark);
+      color: white;
+      border-radius: 14px;
+    }
+
+    .cta-box::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border: 1px solid #ffffff20;
+      border-radius: 50%;
+      right: 220px;
+      top: -155px;
+      pointer-events: none;
+    }
+
+    .cta-box h2 {
+      max-width: 560px;
+      font-size: clamp(28px, 3.5vw, 40px);
+    }
+
+    .cta-box p {
+      margin-top: 13px;
+      max-width: 500px;
+      color: #c8e1dc;
+      font-size: 13px;
+    }
+
+    .cta-box .btn {
+      background: white;
+      color: var(--teal-dark);
+      border-color: white;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-box .btn:hover {
+      background: var(--mint);
+    }
+
+    /* Contact */
+
+    .contact {
+      padding: 85px 0;
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+    }
+
+    .contact-copy h2 {
+      margin: 20px 0;
+    }
+
+    .contact-copy > p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 21px;
+      margin-top: 32px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .contact-row .service-icon {
+      width: 43px;
+      height: 43px;
+      font-size: 19px;
+      margin: 0;
+      flex-shrink: 0;
+    }
+
+    .contact-row strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .contact-row p,
+    .contact-row a {
+      color: var(--muted);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-row a:hover {
+      color: var(--teal);
+    }
+
+    .contact-panel {
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: white;
+    }
+
+    .contact-panel h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .contact-panel > p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .contact-panel .btn {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .contact-note {
+      text-align: center;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 30px 0;
+      background: #123d39;
+      color: white;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer .logo-sub {
+      color: #bdd6d0;
+    }
+
+    .footer-copy {
+      color: #c1d5d0;
+      font-size: 11px;
+      text-align: right;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a:nth-child(2),
+      .nav-links a:nth-child(3) {
+        display: none;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .hero-image {
+        height: 420px;
+      }
+
+      .about-grid,
+      .benefit-grid {
+        gap: 42px;
+      }
+
+      .service-card {
+        padding: 24px 20px;
+      }
+
+      .cta-box {
+        padding: 40px 32px;
+      }
+
+      .contact-grid {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: 90%;
+      }
+
+      .topline {
+        font-size: 10px;
+      }
+
+      .nav {
+        min-height: 72px;
+        gap: 12px;
+      }
+
+      .logo-name {
+        font-size: 17px;
+      }
+
+      .logo-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-links a:not(.btn) {
+        display: none;
+      }
+
+      .nav .btn {
+        padding: 0 12px;
+        min-height: 41px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 52px 0 65px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .benefit-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 40px;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 12vw, 58px);
+        letter-spacing: -2px;
+      }
+
+      .hero-copy {
+        font-size: 14px;
+      }
+
+      .hero-visual {
+        padding-left: 12px;
+        padding-bottom: 22px;
+      }
+
+      .hero-image {
+        height: 370px;
+        border-radius: 110px 110px 10px 10px;
+      }
+
+      .floating-card {
+        padding: 12px 15px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .trust-item {
+        justify-content: flex-start;
+      }
+
+      .about,
+      .services,
+      .benefits {
+        padding: 70px 0;
+      }
+
+      .about-grid,
+      .benefit-grid {
+        gap: 35px;
+      }
+
+      .about-photo {
+        height: 330px;
+      }
+
+      .photo-label {
+        right: -5px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .service-card p {
+        min-height: 0;
+      }
+
+      .section-heading {
+        margin-bottom: 32px;
+      }
+
+      .benefit-image {
+        height: 360px;
+        grid-row: 1;
+      }
+
+      .cta-section {
+        padding-bottom: 65px;
+      }
+
+      .cta-box {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 34px 25px;
+      }
+
+      .cta-box::after {
+        right: -110px;
+      }
+
+      .contact {
+        padding: 70px 0;
+      }
+
+      .contact-panel {
+        padding: 26px 21px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-copy {
+        text-align: left;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topline">
+    A healthier smile starts here. <span>Discover your dental care options.</span>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home" aria-label="Smile Dental Clinic home">
+        <span class="logo-icon">✳</span>
+        <span>
+          <span class="logo-name">Smile Dental</span>
+          <span class="logo-sub">Clinic & Care</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#contact">Book a Visit ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Welcome to Smile Dental</span>
+
+          <h1>
+            Your smile.<br>
+            Your confidence.<br>
+            <span>Our care.</span>
+          </h1>
+
+          <p class="hero-copy">
+            Discover a more comfortable approach to dental care.
+            Our patient-focused philosophy puts your comfort,
+            confidence, and individual needs at the heart of every visit.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Book Your Consultation ↗</a>
+            <a href="#services" class="btn btn-light">Explore Services</a>
+          </div>
+
+          <div class="hero-note">
+            <span class="note-icon">♡</span>
+            <span>Thoughtful care. Personal attention. A smile that feels like you.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            class="hero-image"
+            src="https://cdn.shopify.com/s/files/1/0692/2272/7783/files/creativesmilebelfast-all-on-4-dental-implants-belfast-8378579.jpg?v=1792568853"
+            alt="Dental care and smile restoration"
+            fetchpriority="high"
+          >
+
+          <div class="floating-card">
+            <span class="floating-icon">✧</span>
+            <span>
+              <strong>Your smile matters</strong>
+              <small>Care tailored to your needs</small>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" aria-label="Our approach">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span>♡</span> Patient-first approach
+        </div>
+        <div class="trust-item">
+          <span>✧</span> Personalized care plans
+        </div>
+        <div class="trust-item">
+          <span>＋</span> Care for every smile
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-photo-wrap">
+          <img
+            class="about-photo"
+            src="https://cdn.shopify.com/s/files/1/0692/2272/7783/files/f6a4246e1b092867ae41f80cf565ac4d.jpg?v=1792568910"
+            alt="Modern dental clinic and smile care"
+            loading="lazy"
+          >
+          <div class="photo-label">Care with a personal touch ✦</div>
+        </div>
+
+        <div class="about-content">
+          <span class="eyebrow">A little about us</span>
+          <h2>More than dental care. A better experience.</h2>
+
+          <p>
+            At Smile Dental Clinic, we believe every patient deserves
+            to feel heard, informed, and comfortable. Your goals are
+            unique, and your dental care should reflect that.
+          </p>
+
+          <p>
+            From routine checkups to smile restoration options, our
+            approach begins with understanding your needs and helping
+            you make informed decisions about your oral health.
+          </p>
+
+          <ul class="check-list">
+            <li><span class="check">✓</span> Individualized treatment discussions</li>
+            <li><span class="check">✓</span> Clear communication at every step</li>
+            <li><span class="check">✓</span> A welcoming, patient-focused experience</li>
+          </ul>
+
+          <a href="#contact" class="btn">Get to Know Us ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">What we offer</span>
+          <h2>Care for every kind of smile.</h2>
+          <p>
+            Explore dental care options designed around your oral health,
+            comfort, and personal smile goals.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <div class="service-icon">✧</div>
+            <h3>General Dentistry</h3>
+            <p>
+              Support your oral health with preventive care, dental
+              checkups, and personalized guidance on everyday dental hygiene.
+            </p>
+            <a href="#contact" class="service-link">Explore your options <span>→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">♡</div>
+            <h3>Cosmetic Dentistry</h3>
+            <p>
+              Explore aesthetic dental treatments that may help enhance
+              your smile, with options discussed around your individual needs.
+            </p>
+            <a href="#contact" class="service-link">Discover possibilities <span>→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◈</div>
+            <h3>Dental Implants</h3>
+            <p>
+              Learn about tooth replacement options, including dental
+              implants, and find out whether a treatment may be suitable for you.
+            </p>
+            <a href="#contact" class="service-link">Discuss your options <span>→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">＋</div>
+            <h3>Smile Restoration</h3>
+            <p>
+              Discuss restorative treatments intended to address damaged
+              or missing teeth and support everyday oral function.
+            </p>
+            <a href="#contact" class="service-link">Learn more <span>→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">☼</div>
+            <h3>Smile Enhancement</h3>
+            <p>
+              Explore treatment possibilities that align with your
+              aesthetic preferences and your dentist's clinical advice.
+            </p>
+            <a href="#contact" class="service-link">Find your options <span>→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">❋</div>
+            <h3>Personalized Consultations</h3>
+            <p>
+              Start with a conversation about your concerns, goals,
+              and the next steps that may be right for your dental health.
+            </p>
+            <a href="#contact" class="service-link">Arrange a visit <span>→</span></a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+      <div class="container benefit-grid">
+
+        <div class="benefit-content">
+          <span class="eyebrow">The Smile Dental difference</span>
+          <h2>A more thoughtful way to care for your smile.</h2>
+
+          <p>
+            Dental visits should leave you feeling informed and confident.
+            We believe that good communication and personalized guidance
+            are essential parts of your care experience.
+          </p>
+
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <div class="service-icon">♡</div>
+              <div>
+                <h3>Your needs come first</h3>
+                <p>Discuss your concerns and priorities in a supportive setting.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="service-icon">✧</div>
+              <div>
+                <h3>Understand your options</h3>
+                <p>Get clear explanations of proposed treatments and alternatives.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="service-icon">✓</div>
+              <div>
+                <h3>Make informed decisions</h3>
+                <p>Work with your dental professional to consider suitable next steps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            class="benefit-image"
+            src="https://cdn.shopify.com/s/files/1/0692/2272/7783/files/645bcde7ea772644eb7e34480ea4f232.jpg?v=1792568948"
+            alt="Smile-focused dental treatment"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Ready to take the next step toward your smile?</h2>
+            <p>
+              Let's talk about your dental goals and explore the care
+              options that may be right for you.
+            </p>
+          </div>
+          <a href="#contact" class="btn">Let's Talk About Your Smile ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-copy">
+          <span class="eyebrow">Get in touch</span>
+          <h2>Your next chapter starts with a conversation.</h2>
+          <p>
+            Have questions about a treatment or want to discuss your
+            dental needs? Contact the clinic to ask about consultation
+            availability and the next steps.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-row">
+              <div class="service-icon">⌖</div>
+              <div>
+                <strong>Visit our clinic</strong>
+                <p>Please add your clinic's full address here.</p>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="service-icon">☎</div>
+              <div>
+                <strong>Call us</strong>
+                <p>Add your clinic's telephone number here.</p>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="service-icon">◷</div>
+              <div>
+                <strong>Opening hours</strong>
+                <p>Please contact us to confirm appointment availability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <h3>Let's plan your visit.</h3>
+          <p>
+            Take the first step. Reach out to our team to discuss
+            your needs and arrange a consultation.
+          </p>
+
+          <!-- Replace # with your real booking page or booking form URL -->
+          <a href="#contact" class="btn"
+             onclick="return false;"
+             aria-label="Contact the clinic to arrange a consultation">
+            Contact the Clinic ↗
+          </a>
+
+          <p class="contact-note">
+            Please add a working booking link or contact form before publishing.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="logo" href="#home">
+        <span class="logo-icon">✳</span>
+        <span>
+          <span class="logo-name">Smile Dental</span>
+          <span class="logo-sub">Clinic & Care</span>
+        </span>
+      </a>
+
+      <p class="footer-copy">
+        © 2026 Smile Dental Clinic. All rights reserved.
+        <br>Professional dental care starts with an informed conversation.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
